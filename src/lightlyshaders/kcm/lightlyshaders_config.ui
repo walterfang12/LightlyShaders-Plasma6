@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LightlyShadersKCM</class>
+ <widget class="QWidget" name="LightlyShadersKCM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Corner size (radius):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="kcfg_Roundness">
+         <property name="suffix">
+          <string>px</string>
+         </property>
+         <property name="minimum">
+          <number>3</number>
+         </property>
+         <property name="maximum">
+          <number>64</number>
+         </property>
+         <property name="value">
+          <number>6</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Shadow offset:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="kcfg_ShadowOffset">
+         <property name="suffix">
+          <string>px</string>
+         </property>
+         <property name="minimum">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <number>6</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+
+     <item>
+      <widget class="QCheckBox" name="kcfg_InnerOutline">
+       <property name="text">
+        <string>Draw inner outline</string>
+       </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+      </widget>
+     </item>
+
+     <item row="4" column="7">
+      <widget class="KColorButton" name="kcfg_InnerOutlineColor">
+        <property name="alphaChannelEnabled">
+         <bool>true</bool>
+        </property>
+      </widget>
+     </item>
+
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Inner outline width:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="kcfg_InnerOutlineWidth">
+         <property name="suffix">
+          <string>px</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+
+     <item>
+      <widget class="QCheckBox" name="kcfg_OuterOutline">
+       <property name="text">
+        <string>Draw outer outline</string>
+       </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+      </widget>
+     </item> 
+
+     <item row="4" column="7">
+      <widget class="KColorButton" name="kcfg_OuterOutlineColor">
+        <property name="alphaChannelEnabled">
+         <bool>true</bool>
+        </property>
+      </widget>
+     </item>
+
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="topMargin">
+        <number>7</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Outer outline width:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="kcfg_OuterOutlineWidth">
+         <property name="suffix">
+          <string>px</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+
+     <item>
+      <widget class="QCheckBox" name="kcfg_DisabledForMaximized">
+       <property name="text">
+        <string>Disable for maximized windows</string>
+       </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+      </widget>
+     </item> 
+     <item>
+      <widget class="QComboBox" name="kcfg_CornersType">
+         <item>
+          <property name="text">
+           <string>Rounded</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Squircled</string>
+          </property>
+         </item>        
+      </widget>
+     </item> 
+     <item>
+      <widget class="QLabel" name="squircleRatioLabel">
+       <property name="text">
+        <string>Squircle ratio</string>
+       </property>
+      </widget>
+     </item> 
+     <item>
+      <widget class="QSlider" name="kcfg_SquircleRatio">
+       <property name="minimum">
+        <number>2</number>
+       </property>
+       <property name="maximum">
+        <number>12</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>    
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

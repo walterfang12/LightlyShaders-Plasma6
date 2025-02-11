@@ -1,0 +1,5 @@
+File=lightlyshaders_config.kcfg
+ClassName=LightlyShadersConfig
+NameSpace=KWin
+Singleton=true
+Mutators=true
