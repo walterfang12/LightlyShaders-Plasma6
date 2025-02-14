@@ -1,5 +1,7 @@
 English | [中文](README_zh.md)
 
+## 保证在Plasma 6.2.9之前的版本可用，Plasma 6.3暂不可用。
+
 # LightlyShaders v3.0
 
  This effect works correctly with stock Plasma effects.Supports KDE Plasma 6.
