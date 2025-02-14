@@ -1,6 +1,6 @@
 English | [中文](README_zh.md)
 
-## Ensure that versions prior to Plasma 6.2.9 are available, Plasma 6.3 is currently unavailable.
+## This branch only supports Plasma 6.2.9 and earlier versions. If you are a Plasma 6.3 user, please move to [this branch](https://github.com/walterfang12/LightlyShaders-Plasma6/tree/plasma-6.3).
 
 # LightlyShaders v3.0
 
