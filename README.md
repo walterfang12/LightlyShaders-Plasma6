@@ -1,6 +1,6 @@
 English | [中文](README_zh.md)
 
-## ##This branch only supports Plasma 6.3. For users of older versions, please move to the [main branch](https://github.com/walterfang12/LightlyShaders-Plasma6/)
+##This branch only supports Plasma 6.3. For users of older versions, please move to the [main branch](https://github.com/walterfang12/LightlyShaders-Plasma6/)
 
 # LightlyShaders v3.0
 
