@@ -31,7 +31,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-#include <KDecoration2/Decoration>
+#include <KDecoration3/Decoration>
 
 Q_LOGGING_CATEGORY(KWIN_BLUR, "kwin_effect_blur", QtWarningMsg)
 
@@ -329,7 +329,7 @@ void BlurEffect::setupDecorationConnections(EffectWindow *w)
         return;
     }
 
-    connect(w->decoration(), &KDecoration2::Decoration::blurRegionChanged, this, [this, w]() {
+    connect(w->decoration(), &KDecoration3::Decoration::blurRegionChanged, this, [this, w]() {
         updateBlurRegion(w);
     });
 }
@@ -384,8 +384,9 @@ QRegion BlurEffect::decorationBlurRegion(const EffectWindow *w) const
     if (!decorationSupportsBlurBehind(w)) {
         return QRegion();
     }
-
-    QRegion decorationRegion = QRegion(w->decoration()->rect()) - w->decoration()->rect();
+    QRectF rectF = w->decoration()->rect();
+    QRect rect = rectF.toRect(); // 将 QRectF 转换为 QRect
+    QRegion decorationRegion = QRegion(rect) - rect;
     //! we return only blurred regions that belong to decoration region
     return decorationRegion.intersected(w->decoration()->blurRegion());
 }
@@ -406,7 +407,9 @@ QRegion BlurEffect::blurRegion(EffectWindow *w) const
                 if (frame.has_value()) {
                     region = frame.value();
                 }
-                region += content->translated(w->contentsRect().topLeft().toPoint()) & w->decoration()->rect();
+                QRectF rectF = w->decoration()->rect();
+                QRect rect = rectF.toRect(); // 将 QRectF 转换为 QRect
+                region += content->translated(w->contentsRect().topLeft().toPoint()) & rect;
             }
         } else if (frame.has_value()) {
             region = frame.value();
