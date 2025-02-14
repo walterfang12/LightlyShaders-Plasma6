@@ -1,6 +1,6 @@
 English | [中文](README_zh.md)
 
-## 保证在Plasma 6.2.9之前的版本可用，Plasma 6.3暂不可用。
+## Ensure that versions prior to Plasma 6.2.9 are available, Plasma 6.3 is currently unavailable.
 
 # LightlyShaders v3.0
 
